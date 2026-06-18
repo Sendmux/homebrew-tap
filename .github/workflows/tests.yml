@@ -1,0 +1,29 @@
+name: Tests
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: macos-latest
+    steps:
+      - name: Check out tap
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+
+      - name: Tap local repository
+        run: brew tap sendmux/tap "$GITHUB_WORKSPACE"
+
+      - name: Audit formula
+        run: brew audit --strict --new --online sendmux/tap/sendmux
+
+      - name: Install formula
+        run: HOMEBREW_NO_INSTALL_FROM_API=1 brew install --build-from-source sendmux/tap/sendmux
+
+      - name: Test formula
+        run: brew test sendmux/tap/sendmux
