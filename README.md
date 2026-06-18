@@ -28,7 +28,7 @@ brew upgrade sendmux
 
 | Formula | Installs | Documentation |
 | --- | --- | --- |
-| `sendmux` | The `sendmux` CLI | [docs.sendmux.ai/cli](https://docs.sendmux.ai/cli) |
+| `sendmux` | The `sendmux` CLI | [sendmux.ai/docs/cli](https://sendmux.ai/docs/cli) |
 
 ## Maintainers
 
