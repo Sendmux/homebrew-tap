@@ -1,8 +1,8 @@
 class Sendmux < Formula
   desc "Command-line access to Sendmux APIs"
   homepage "https://sendmux.ai/docs"
-  url "https://registry.npmjs.org/@sendmux/cli/-/cli-1.3.1.tgz"
-  sha256 "c16c416780c58934a8ff9e9208d11f103a214f74c0805277a1eb4998f014f60a"
+  url "https://registry.npmjs.org/@sendmux/cli/-/cli-1.4.0.tgz"
+  sha256 "34d71c1e07c49ced0d7827b1ae27f45273e4ca72e582281fbc339610bbf7c5a6"
   license "MIT"
 
   depends_on "node"
